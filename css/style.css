@@ -33,10 +33,9 @@ html {
   color: #000000;
   text-transform: uppercase;
   background-color: #f2f2f2;
-  max-width: 360px;
+  max-width: 1200px;
   min-width: 360px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 a {
@@ -46,8 +45,16 @@ a {
 .main-header {
   position: relative;
   display: flex;
-  align-items: center;
-  height: 50px;
+  align-items: flex-end;
+  height: 70px;
+  margin: 0 50px;
+}
+
+.header-logotype {
+  font-size: 21px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #000000;
 }
 
 .main-nav__list {
@@ -116,7 +123,7 @@ a {
   position: absolute;
   top: -21px;
   margin-left: 50px;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 40px;
   font-weight: 400;
   color: #383838;
