@@ -128,6 +128,7 @@ a {
   cursor: default;
   padding: 0 30px;
 }
+
 /**********ABOUT**********/
 .about {
   display: flex;
@@ -174,6 +175,14 @@ a {
   color: #817c7c;
 }
 
-@media screen and (max-width:360px) {
+@media screen and (max-width:740px) {
+  .main-header {
+    width: 100%;
+  }
 
+  .header-logotype {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 400;
+  }
 }
