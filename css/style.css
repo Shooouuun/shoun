@@ -175,14 +175,21 @@ a {
   color: #817c7c;
 }
 
-@media screen and (max-width:740px) {
+@media (max-width:480px) {
   .main-header {
-    width: 100%;
+    margin: 0 30px;
+    padding-top: 60px;
   }
 
   .header-logotype {
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 55px;
+    line-height: 60px;
+    font-weight: 400;
+  }
+
+  .main-nav__link {
+    font-size: 35px;
+    line-height: 60px;
     font-weight: 400;
   }
 }
