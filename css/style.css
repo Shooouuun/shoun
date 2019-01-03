@@ -176,7 +176,7 @@ a {
   color: #817c7c;
 }
 
-@media (max-width:360px) {
+@media (max-width:4140px) {
   .main-header {
     margin: 0 30px;
     padding-top: 30px;
