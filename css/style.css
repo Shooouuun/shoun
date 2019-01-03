@@ -53,9 +53,10 @@ a {
 }
 
 .header-logotype {
+  font-family: 'Quicksand', sans-serif;
   font-size: 21px;
   line-height: 28px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .main-nav__wrapper {
@@ -79,9 +80,10 @@ a {
   position: relative;
   z-index: 1;
   display: block;
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
   line-height: 28px;
-  font-weight: 400;
+  font-weight: 500;
   color: #000000;
   transition: 0.3s;
 }
@@ -128,7 +130,6 @@ a {
   cursor: default;
   padding: 0 30px;
 }
-
 /**********ABOUT**********/
 .about {
   display: flex;
@@ -175,22 +176,24 @@ a {
   color: #817c7c;
 }
 
-@media (max-width:480px) {
+@media (max-width:360px) {
   .main-header {
     margin: 0 30px;
     padding-top: 30px;
   }
 
   .header-logotype {
-    font-size: 25px;
-    line-height: 30px;
-    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #202020;
   }
 
   .main-nav__link {
-    font-size: 15px;
-    line-height: 35px;
+    font-size: 13px;
+    line-height: 27px;
     font-weight: 400;
+    color: #282727;
   }
 
   .intro {
@@ -198,11 +201,27 @@ a {
   }
 
   .intro-caption {
-    font-size: 55px;
+   font-size: 55px;
     line-height: 55px;
     font-weight: 400;
-    color: #383838;
+    color: #282727;
     cursor: default;
     padding: 0 30px;
+  }
+
+  .test {
+    padding: 15px 35px 40px;
+    margin: 0 10px 30px 10px;
+  }
+
+  .about-caption {
+    top: -14px;
+    margin-left: -12px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .test p {
+    line-height: 26px;
   }
 }
