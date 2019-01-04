@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>SHOUN • Главная</title>
   <link rel="icon" href="img/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=cyrillic" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/min-normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -19,6 +19,7 @@
         <li class="main-nav__item"><a class="main-nav__link" href="#">about</a></li>
       </ul>
     </nav>
+    <button class="modal-open" type="button">menu</button>
   </header>
 
   <main>
@@ -43,12 +44,11 @@
     </section>
   </main>
 
-  <footer class="main-footer">
-
-  </footer>
-
   <section class="modal modal-login">
-    <a class="header-logotype-modal" title="shoun">shoun</a>
+    <header class="header-modal">
+      <a class="header-logotype-modal" title="shoun">shoun</a>
+      <button class="modal-close" type="button">close</button>
+    </header>
     <nav class="main-nav__wrapper-modal">
       <ul class="main-nav__list-modal">
         <li class="main-nav__item-modal"><a class="main-nav__link-modal" href="#">works</a></li>
@@ -56,8 +56,25 @@
         <li class="main-nav__item-modal"><a class="main-nav__link-modal" href="#">about</a></li>
       </ul>
     </nav>
-
-    <button class="modal-close" type="button">Закрыть</button>
   </section>
+
+
+  <script>
+    var link = document.querySelector(".modal-open");
+
+    var popup = document.querySelector(".modal-login");
+    var close = popup.querySelector(".modal-close");
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+    });
+
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+    });
+  </script>
 </body>
 </html>
