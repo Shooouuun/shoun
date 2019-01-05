@@ -324,7 +324,6 @@ a {
   .main-nav__wrapper-modal {
     display: flex;
     height: 100%;
-    pointer-events: inherit;
     transition-duration: 3s;
   }
 
@@ -345,6 +344,7 @@ a {
     position: relative;
     z-index: 1;
     display: block;
+    pointer-events: inherit;
     font-family: 'Open Sans', sans-serif;
     font-size: 50px;
     line-height: 60px;
