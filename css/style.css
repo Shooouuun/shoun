@@ -232,12 +232,6 @@ a {
     z-index: 50;
   }
 
-/*
-  .main-header {
-    margin: 0 30px;
-    padding-top: 30px;
-  }
-*/
   .header-logotype {
     font-size: 14px;
     line-height: 26px;
@@ -245,16 +239,30 @@ a {
     color: #202020;
   }
 
-  .modal-open {
+  .buttons {
     display: flex;
     justify-content: flex-end;
-    font-family: 'Open Sans', sans-serif;
+  }
+
+  .modal-open {
+    display: flex;
+
     font-size: 14px;
     line-height: 26px;
     font-weight: 600;
     color: #303030;
     text-transform: uppercase;
+    transition-duration: 0.8s;
+    opacity: 1;
+    
   }
+
+  .modal-open-disappear {
+    transition-duration: 0.8s;
+    opacity: 0;
+    padding-right: 50px;
+  }
+
 
   .main-nav__wrapper {
     display: none;
@@ -272,9 +280,18 @@ a {
     height: 300px;
   }
 
+  .intro__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+    height: 120px;
+  }
+
   .intro-caption {
-   font-size: 55px;
-    line-height: 55px;
+    font-size: 70px;
+    line-height: 70px;
     font-weight: 600;
     color: #282727;
     cursor: default;
@@ -297,6 +314,25 @@ a {
     line-height: 26px;
   }
 
+  .nav__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: flex-end;
+
+    list-style: none;
+    width: 100%;
+    margin: 0 30px;
+  }
+
+  .nav__link {
+    font-size: 23px;
+    line-height: 37px;
+    font-weight: 600;
+    color: #282727;
+    cursor: default;
+  }
+
   .modal-login {
     display: block;
     position: fixed;
@@ -305,13 +341,10 @@ a {
     bottom: 100%;
     width: 100%;
     padding: 14px 30px 30px;
-    z-index: 100;
+    z-index: 49;
 
     color: #000000;
-    background-color: #ffffff;
-    background-image: url("../img/pattern-light.jpg");
-    background-position: 0 0;
-    background-repeat: repeat;
+    background-color: #f2f2f2;
     opacity: 0;
     transition-duration: 0.8s;
     /*
@@ -322,7 +355,6 @@ a {
   .modal-show {
     top: 0;
     bottom: 0;
-
     opacity: 1;
     /*
     animation: bounce 0.8s;
@@ -365,7 +397,21 @@ a {
     font-weight: 600;
     color: #303030;
     text-transform: uppercase;
-    transition: 0.3s;
+    transition-duration: 0.8s;
+
+    opacity: 1;
+  }
+
+  .modal-close-appear {
+    margin-right: 0;
+    transition-duration: 0.8s;
+    opacity: 1;
+  }
+
+  .modal-open-disappear {
+    transition-duration: 0.8s;
+    opacity: 0;
+    padding-right: 50px;
   }
 
   .main-nav__wrapper-modal {
@@ -423,4 +469,5 @@ a {
     height: 55px;
     transition: 0.3s;
   }
+
 }
