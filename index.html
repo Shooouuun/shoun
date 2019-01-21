@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>SHOUN • Главная</title>
-  <link rel="icon" href="img/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/min-normalize.css">
@@ -31,104 +30,25 @@
       <h2 class="intro-caption">Nice to&nbsp;meet you</h2>
     </section>
     <section class="intro__nav">
-      <h2 class="visually-hidden">bottom</h2>
+      <h2 class="visually-hidden">links</h2>
       <ul class="nav__wrapper">
         <li><a class="nav__link" href="">View work</a></li>
         <li><a class="nav__link" href="">Read about me</a></li>
         <li><a class="nav__link" href="">Contact</a></li>
       </ul>
     </section>
-<!--
-    <section class="about">
-      <h2 class="visually-hidden">about</h2>
-      <div class="test">
-        <h3 class="about-caption">what happened</h3>
-        <time class="time" datetime="2019-01-02T23:00:00">02 января 2019</time>
-        <p>Доработал навигацию. У линков теперь есть анимации. Добавлено переполнение и доступность. Стоило проверить кроссбраузерность, после того как сделал всё на гридах, так IE сказал мне, что я обосрался и делать этого не стоило. Добиться желаемого с префиксами мне так же не удалось. Надо курить и изучать.
-          Полностью пересмотрел код. Где-то доработано, а где-то вовсе убрано. Version 0.1.0.</p>
-      </div>
-      <div class="test">
-        <h3 class="about-caption">i live here</h3>
-        <time class="time" datetime="2018-12-26T11:00:00">26 декабря 2018</time>
-        <p>Эта страница создана исключительно для чилла и практики, которая на потяжении всего 2k19 года будет модернизироваться, расскажет обо мне и покажет работы. Возможно, это даже будет блог, хоть и ставки все на <strong>портфолио</strong>.
-          Модернизация будет осуществляться по степени прокачивания скилла и свободного времени. Есть нехватка знаний в адаптивности. Именно поэтому сейчас тяжело читается, да. Сомневаюсь в необходимости делать макет т.к. он здесь не пригодится. Весь дизайн будет делаться спонтанно. Version 0.0.0. Поехали!</p>
-      </div>
+
+    <section class="modal-login">
+      <h2 class="visually-hidden">popup</h2>
+      <nav class="main-nav__wrapper-modal">
+        <ul class="main-nav__list-modal">
+          <li class="main-nav__item-modal"><a class="main-nav__link-modal" href="#">View work</a></li>
+          <li class="main-nav__item-modal"><a class="main-nav__link-modal" href="#">Read about me</a></li>
+          <li class="main-nav__item-modal"><a class="main-nav__link-modal" href="#">Contact</a></li>
+        </ul>
+      </nav>
     </section>
   </main>
--->
-  <section class="modal-login">
-    <h2 class="visually-hidden">popup</h2>
-    <header class="header-modal">
-      <a class="header-logotype-modal" title="shoun">shoun</a>
-      <!--
-      <button class="modal-close" type="button">close</button>
-      -->
-    </header>
-    <nav class="main-nav__wrapper-modal">
-      <ul class="main-nav__list-modal">
-        <li class="main-nav__item-modal"><a class="main-nav__link-modal" href="#">view work</a></li>
-        <li class="main-nav__item-modal"><a class="main-nav__link-modal" href="#">read about me</a></li>
-        <li class="main-nav__item-modal"><a class="main-nav__link-modal" href="#">contact</a></li>
-      </ul>
-    </nav>
-  </section>
-
-
-  <script>
-/*
-    var link = document.querySelector(".modal-open");
-
-    var popup = document.querySelector(".modal-login");
-    var close = popup.querySelector(".modal-close");
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-    });
-
-    close.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
-      popup.classList.remove("modal-error");
-    });
-
-
-    var disappear = document.querySelector(".modal-open");
-    var appear = document.querySelector(".modal-close");
-
-    disappear.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      disappear.classList.add("modal-open-disappear");
-      appear.classList.add("modal-close-appear");
-    });
-
-    appear.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      disappear.classList.remove("modal-open-disappear");
-      disappear.classList.remove("modal-error");
-    });
-*/
-  var link = document.querySelector(".modal-open");
-
-  var popup = document.querySelector(".modal-login");
-  var close = document.querySelector(".modal-close");
-
-  link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.add("modal-show");
-    link.classList.add("modal-open-1");
-    close.classList.add("modal-close-1");
-  });
-
-  close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-    link.classList.remove("modal-open-1");
-    close.classList.remove("modal-close-1");
-
-    popup.classList.remove("modal-error");
-  });
-
-  </script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>

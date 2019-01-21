@@ -1,42 +1,29 @@
 @font-face {
-  font-family: "Gilroy";
-  src: url("../fonts/gilroyextrabold.woff") format("woff");
-  font-weight: 800;
+  font-family: 'Circular Std Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Circular Std Book'), url('../fonts/CircularStd-Book.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("../fonts/gilroylight.woff2") format("woff2"),
-       url("../fonts/gilroylight.woff") format("woff");
-  font-weight: 300;
+  font-family: 'Circular Std Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Circular Std Medium'), url('../fonts/CircularStd-Medium.woff') format('woff');
 }
 
 @font-face {
-font-family: 'Circular Std Book';
-font-style: normal;
-font-weight: normal;
-src: local('Circular Std Book'), url('../fonts/CircularStd-Book.woff') format('woff');
+  font-family: 'Circular Std Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Circular Std Bold'), url('../fonts/CircularStd-Bold.woff') format('woff');
 }
 
 @font-face {
-font-family: 'Circular Std Medium';
-font-style: normal;
-font-weight: normal;
-src: local('Circular Std Medium'), url('../fonts/CircularStd-Medium.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Circular Std Bold';
-font-style: normal;
-font-weight: normal;
-src: local('Circular Std Bold'), url('../fonts/CircularStd-Bold.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Circular Std Black';
-font-style: normal;
-font-weight: normal;
-src: local('Circular Std Black'), url('../fonts/CircularStd-Black.woff') format('woff');
+  font-family: 'Circular Std Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Circular Std Black'), url('../fonts/CircularStd-Black.woff') format('woff');
 }
 
 *, *::before, *::after {
@@ -70,8 +57,10 @@ a {
   outline: none;
   border: none;
 }
+
 /**********GLOVAL STYLES**********/
 .index-page {
+  position: relative;
   font-family: 'Circular Std Medium', Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -81,7 +70,6 @@ a {
   text-transform: inherit;
   background-color: #f2f2f2;
   max-width: 1200px;
-  min-width: 360px;
   margin: 0 auto;
 }
 /**********HEADER**********/
@@ -223,7 +211,7 @@ a {
 .nav__link {
   font-size: 23px;
   line-height: 37px;
-  font-weight: 600;
+  font-weight: 700;
   color: #282727;
   cursor: default;
 }
@@ -282,28 +270,32 @@ a {
   display: none;
 }
 
-
+/**********MOBILE**********/
 @media (max-width:414px) {
+  .index-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f2f2f2 url("../img/") no-repeat 50% 21.4%;
+    background-size: cover;
+  }
+/**********HEADER**********/
   .main-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
     min-height: 50px;
     margin: 0;
     padding: 30px 30px 30px;
-    background-color: #f2f2f2;
     z-index: 50;
+    animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
 
   .header-logotype {
-    font-size: 14px;
     line-height: 26px;
-    font-weight: 700;
-    color: white;
   }
 
   .buttons {
@@ -324,34 +316,51 @@ a {
     transition-duration: 0.8s;
     opacity: 1;
   }
-/*
-  .modal-open-disappear {
-    transition-duration: 0.8s;
-    opacity: 0;
-    padding-right: 50px;
-  }
-*/
+
   .modal-open-1 {
    transition-duration: 0.8s;
    right: 30%;
    opacity: 0;
  }
 
+ .modal-close {
+   position: absolute;
+   right: 30%;
+   display: flex;
+   justify-content: flex-end;
+   font-size: 14px;
+   line-height: 26px;
+   font-weight: 600;
+   color: #303030;
+   transition: 0.3s;
+   transition-duration: 0.8s;
+   opacity: 0;
+ }
+
+ .modal-close-1 {
+  right: 0;
+  transition-duration: 0.8s;
+  opacity: 1;
+}
 
   .main-nav__wrapper {
     display: none;
   }
-
-  .main-nav__link {
-    font-size: 13px;
-    line-height: 27px;
-    font-weight: 400;
-    color: #282727;
+/**********INTRO**********/
+  .intro {
+    margin: 56px 0 15%;
+    height: 300px;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
 
-  .intro {
-    margin-top: 56px;
-    height: 300px;
+  .intro-caption {
+    font-size: 70px;
+    line-height: 60px;
+    letter-spacing: -3px;
+    font-weight: 600;
+    color: #282727;
+    cursor: default;
+    padding: 0 30px;
   }
 
   .intro__nav {
@@ -361,31 +370,20 @@ a {
     align-items: center;
     margin-bottom: 70px;
     height: 120px;
+    margin: 0;
+    font-weight: 700;
+    animation: text-focus-in 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
 
-  .intro-caption {
-    font-size: 70px;
-    line-height: 70px;
-    font-weight: 600;
-    color: #282727;
-    cursor: default;
-    padding: 0 30px;
-  }
-
-  .test {
-    padding: 15px 35px 40px;
-    margin: 0 10px 30px 10px;
-  }
-
-  .about-caption {
-    top: -14px;
-    margin-left: -12px;
-    font-size: 22px;
-    line-height: 26px;
-  }
-
-  .test p {
-    line-height: 26px;
+  @keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
   }
 
   .nav__wrapper {
@@ -400,13 +398,13 @@ a {
   }
 
   .nav__link {
-    font-size: 23px;
-    line-height: 37px;
-    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 700;
     color: #282727;
     cursor: default;
   }
-
+/**********MODAL**********/
   .modal-login {
     display: block;
     position: fixed;
@@ -421,95 +419,43 @@ a {
     background-color: #f2f2f2;
     opacity: 0;
     transition-duration: 0.8s;
-    /*
-    animation: bounce 0.8s;
-    */
   }
 
   .modal-show {
     top: 0;
     bottom: 0;
     opacity: 1;
-    /*
-    animation: bounce 0.8s;
-    */
   }
-
-  @keyframes bounce {
-    0% {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  .header-modal {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 28px;
-    width: 100%;
-  }
-
-  .header-logotype-modal {
-    font-family: 'Lato', sans-serif;
-    font-size: 22px;
-    line-height: 26px;
-    font-weight: 400;
-    transition-duration: 1s;
-  }
-
-  .modal-close {
-    position: absolute;
-    right: 30%;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: 600;
-    color: #303030;
-    transition: 0.3s;
-    transition-duration: 0.8s;
-    opacity: 0;
-  }
-
-  .modal-close-1 {
-
-   right: 0;
-   transition-duration: 0.8s;
-
-   opacity: 1;
- }
-/*
-  .modal-close-appear {
-    margin-right: 0;
-    transition-duration: 0.8s;
-    opacity: 1;
-  }
-*/
-  .modal-open-disappear {
-    transition-duration: 0.8s;
-    opacity: 0;
-    padding-right: 50px;
-  }
-
+/**********MODAL-CONTENT**********/
   .main-nav__wrapper-modal {
     display: flex;
+    justify-content: flex-end;
     height: 100%;
-    transition-duration: 3s;
   }
 
   .main-nav__list-modal {
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
     list-style: none;
-    width: 100%;
+    margin-bottom: 50px;
+    animation: text-blur-out 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
+
+  @keyframes text-blur-out {
+    0% {
+      filter: blur(0.01);
+    }
+    100% {
+      filter: blur(12px) opacity(0%);
+    }
+  }
+
+  .main-nav__list-modal-1 {
+    animation: text-focus-in 1.0s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+
 
   .main-nav__item-modal {
     margin-bottom: 10px;
@@ -517,15 +463,14 @@ a {
 
   .main-nav__link-modal {
     position: relative;
-    z-index: 1;
     display: block;
-    font-family: 'Lato', sans-serif;
-    font-size: 50px;
-    line-height: 60px;
-    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: 700;
     color: #282727;
     transition: 0.3s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 1;
   }
 
   .main-nav__link-modal:hover,
@@ -548,7 +493,7 @@ a {
 
   .main-nav__link-modal:hover::before,
   .main-nav__link-modal:focus::before {
-    height: 55px;
+    height: 42px;
     transition: 0.3s;
   }
 
