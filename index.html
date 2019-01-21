@@ -4,24 +4,24 @@
   <meta charset="utf-8">
   <title>SHOUN • Главная</title>
   <link rel="icon" href="img/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/min-normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="index-page">
   <header class="main-header">
-    <a class="header-logotype" title="shoun">shoun</a>
+    <a class="header-logotype" title="shoun">Shoun</a>
     <nav class="main-nav__wrapper">
       <ul class="main-nav__list">
-        <li class="main-nav__item"><a class="main-nav__link" href="#">works</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">skills</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">about</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Works</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Skills</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">About</a></li>
       </ul>
     </nav>
     <div class="buttons">
-      <button class="modal-open" type="button">menu</button>
-      <button class="modal-close" type="button">close</button>
+      <button class="modal-open" type="button">Menu</button>
+      <button class="modal-close" type="button">Close</button>
     </div>
   </header>
 
@@ -33,12 +33,12 @@
     <section class="intro__nav">
       <h2 class="visually-hidden">bottom</h2>
       <ul class="nav__wrapper">
-        <li><a class="nav__link" href="">view work</a></li>
-        <li><a class="nav__link" href="">read about me</a></li>
-        <li><a class="nav__link" href="">contact</a></li>
+        <li><a class="nav__link" href="">View work</a></li>
+        <li><a class="nav__link" href="">Read about me</a></li>
+        <li><a class="nav__link" href="">Contact</a></li>
       </ul>
     </section>
-
+<!--
     <section class="about">
       <h2 class="visually-hidden">about</h2>
       <div class="test">
@@ -55,7 +55,7 @@
       </div>
     </section>
   </main>
-
+-->
   <section class="modal-login">
     <h2 class="visually-hidden">popup</h2>
     <header class="header-modal">
@@ -75,7 +75,7 @@
 
 
   <script>
-
+/*
     var link = document.querySelector(".modal-open");
 
     var popup = document.querySelector(".modal-login");
@@ -107,6 +107,27 @@
       disappear.classList.remove("modal-open-disappear");
       disappear.classList.remove("modal-error");
     });
+*/
+  var link = document.querySelector(".modal-open");
+
+  var popup = document.querySelector(".modal-login");
+  var close = document.querySelector(".modal-close");
+
+  link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+    link.classList.add("modal-open-1");
+    close.classList.add("modal-close-1");
+  });
+
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+    link.classList.remove("modal-open-1");
+    close.classList.remove("modal-close-1");
+
+    popup.classList.remove("modal-error");
+  });
 
   </script>
 </body>
