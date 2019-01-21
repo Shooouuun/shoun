@@ -64,7 +64,7 @@ a {
   font-family: 'Circular Std Medium', Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
-  font-weight: 400;
+  font-weight: 500;
   font-kerning: none;
   color: #000000;
   text-transform: inherit;
@@ -86,7 +86,7 @@ a {
   text-align: center;
   font-size: 14px;
   line-height: 28px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: default;
   background-color: #383838;
   color: white;
@@ -117,7 +117,7 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-size: 14px;
   line-height: 28px;
-  font-weight: 600;
+  font-weight: 500;
   color: #2a2a2a;
 }
 
@@ -164,37 +164,10 @@ a {
   font-family: 'Circular Std Medium', Arial, sans-serif;
   font-size: 80px;
   line-height: 100px;
-  font-weight: 600;
+  font-weight: 500;
   color: #383838;
   cursor: default;
   padding: 0 30px;
-  /*
-  background: linear-gradient(358deg, #ff004d, #000000, #000000, #ff0000);
-  background-size: 80% 800%;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  -webkit-animation: Animation 18s ease infinite;
-  -moz-animation: Animation 18s ease infinite;
-  animation: Animation 18s ease infinite;
-  */
-}
-
-@-webkit-keyframes Animation {
-   0%{background-position:0% 96%}
-   50%{background-position:100% 5%}
-   100%{background-position:0% 96%}
-}
-@-moz-keyframes Animation {
-   0%{background-position:0% 96%}
-   50%{background-position:100% 5%}
-   100%{background-position:0% 96%}
-}
-@keyframes Animation {
-   0%{background-position:0% 96%}
-   50%{background-position:100% 5%}
-   100%{background-position:0% 96%}
 }
 
 .intro__nav {
@@ -211,7 +184,7 @@ a {
 .nav__link {
   font-size: 23px;
   line-height: 37px;
-  font-weight: 700;
+  font-weight: 500;
   color: #282727;
   cursor: default;
 }
@@ -311,7 +284,7 @@ a {
     justify-content: flex-end;
     font-size: 14px;
     line-height: 26px;
-    font-weight: 600;
+    font-weight: 500;
     color: #303030;
     transition-duration: 0.8s;
     opacity: 1;
@@ -330,7 +303,7 @@ a {
    justify-content: flex-end;
    font-size: 14px;
    line-height: 26px;
-   font-weight: 600;
+   font-weight: 500;
    color: #303030;
    transition: 0.3s;
    transition-duration: 0.8s;
@@ -357,7 +330,7 @@ a {
     font-size: 70px;
     line-height: 60px;
     letter-spacing: -3px;
-    font-weight: 600;
+    font-weight: 500;
     color: #282727;
     cursor: default;
     padding: 0 30px;
@@ -371,7 +344,7 @@ a {
     margin-bottom: 70px;
     height: 120px;
     margin: 0;
-    font-weight: 700;
+    font-weight: 500;
     animation: text-focus-in 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
 
@@ -400,7 +373,7 @@ a {
   .nav__link {
     font-size: 30px;
     line-height: 45px;
-    font-weight: 700;
+    font-weight: 500;
     color: #282727;
     cursor: default;
   }
@@ -466,7 +439,7 @@ a {
     display: block;
     font-size: 35px;
     line-height: 42px;
-    font-weight: 700;
+    font-weight: 500;
     color: #282727;
     transition: 0.3s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
