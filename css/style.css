@@ -251,8 +251,9 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #f2f2f2 url("../img/") no-repeat 50% 21.4%;
-    background-size: cover;
+
+
+
   }
 /**********HEADER**********/
   .main-header {
@@ -469,5 +470,6 @@ a {
     height: 42px;
     transition: 0.3s;
   }
+
 
 }
