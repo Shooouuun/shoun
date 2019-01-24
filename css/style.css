@@ -272,15 +272,14 @@ a {
     line-height: 26px;
   }
 
-  .buttons {
+  .dropdown-menu {
     position: relative;
     display: flex;
     justify-content: flex-end;
   }
 
-  .modal-open {
+  .dropdown-menu__button {
     position: absolute;
-    right: 0;
     display: flex;
     justify-content: flex-end;
     font-size: 14px;
@@ -288,33 +287,19 @@ a {
     font-weight: 500;
     color: #303030;
     transition-duration: 0.8s;
-    opacity: 1;
   }
 
-  .modal-open-1 {
+  .dropdown-menu__button--open {
    transition-duration: 0.8s;
-   right: 30%;
-   opacity: 0;
+   right: 0;
+   opacity: 1;
  }
 
- .modal-close {
-   position: absolute;
-   right: 30%;
-   display: flex;
-   justify-content: flex-end;
-   font-size: 14px;
-   line-height: 26px;
-   font-weight: 500;
-   color: #303030;
-   transition: 0.3s;
-   transition-duration: 0.8s;
-   opacity: 0;
- }
 
- .modal-close-1 {
-  right: 0;
+ .dropdown-menu__button--close {
+  right: 30%;
   transition-duration: 0.8s;
-  opacity: 1;
+  opacity: 0;
 }
 
   .main-nav__wrapper {
