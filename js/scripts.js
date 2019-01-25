@@ -7,15 +7,15 @@ open.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-show");
   open.classList.toggle("dropdown-menu__button--close");
-  close.classList.toggle("dropdown-menu__button dropdown-menu__button--open");
+  close.classList.toggle("dropdown-menu__button--open");
   focusblock.classList.add("main-nav__list-modal-1");
 });
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal-show");
-  open.classList.toggle("dropdown-menu__button dropdown-menu__button--open");
-  close.classList.toggle("dropdown-menu__button dropdown-menu__button--close");
+  open.classList.toggle("dropdown-menu__button--open");
+  close.classList.toggle("dropdown-menu__button--close");
   focusblock.classList.remove("main-nav__list-modal-1");
 
   popup.classList.remove("modal-error");
