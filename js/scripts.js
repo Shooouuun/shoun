@@ -1,6 +1,6 @@
-var open = document.querySelector(".modal-open");
+var open = document.querySelector(".dropdown-menu__button--open");
 var popup = document.querySelector(".modal-login");
-var close = document.querySelector(".modal-close");
+var close = document.querySelector(".dropdown-menu__button--close");
 var focusblock = document.querySelector(".main-nav__list-modal");
 
 open.addEventListener("click", function (evt) {
