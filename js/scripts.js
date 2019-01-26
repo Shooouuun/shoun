@@ -1,22 +1,22 @@
 var open = document.querySelector(".dropdown-menu__button--open");
-var popup = document.querySelector(".modal-login");
 var close = document.querySelector(".dropdown-menu__button--close");
+var dropdown = document.querySelector(".modal-login");
 var focusblock = document.querySelector(".main-nav__list-modal");
 
 open.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.add("modal-show");
-  open.classList.add("dropdown-menu__button--close");
-  close.classList.add("dropdown-menu__button--open");
+  open.classList.add("dropdown-menu__button--close1");
+  close.classList.add("dropdown-menu__button--open1");
+  dropdown.classList.add("modal-show");
   focusblock.classList.add("main-nav__list-modal-1");
 });
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.remove("modal-show");
-  open.classList.remove("dropdown-menu__button--open");
-  close.classList.remove("dropdown-menu__button--close");
+  open.classList.remove("dropdown-menu__button--close1");
+  close.classList.remove("dropdown-menu__button--open1");
+  dropdown.classList.remove("modal-show");
   focusblock.classList.remove("main-nav__list-modal-1");
 
-  popup.classList.remove("modal-error");
+  dropdown.classList.remove("modal-error");
 });
