@@ -176,7 +176,7 @@ a {
         cursor: default;
       }
 /**********MOBILE**********/
-@media (max-width:414px) {
+@media (max-width:414px){
   .index-page {
     position: fixed;
     top: 0;
